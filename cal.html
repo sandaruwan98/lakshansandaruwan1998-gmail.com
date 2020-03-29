@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The LK CAL</title>
+	 <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+div.background {
+  background: url(klematis.jpg) repeat;
+  border: 2px solid black;
+}
+
+div.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+</style>
+
+	 <!-- <link href="s.css" rel="stylesheet"> -->
+</head>
+<body>
+	<div class="background">
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div id="main-content" class="col-sm-3">
+			<h1>Simple calculator</h1>
+			<form action="" method="post" >
+				<div class="form-group">
+					<label>1st Number       :</label>
+					<input type="text" name="first_no" class="form-control col-sm-6" value="<?php echo($first)?>">
+				</div>
+				<div class="entry">
+					<label>2nd Number       :</label>
+					<input type="text" name="second_no" class="form-control col-sm-6" value="<?php echo($second) ?>">
+				</div>
+				
+				
+				<div class="form-group">
+					<label for="s1">Select operator :</label>
+					<select name="operator"class="form-control col-sm-2" id="s1" >
+						<option value="+" <?php if ($op=='+') {echo " selected";} ?> > + </option>
+						<option value="-" <?php if ($op=='-') {echo " selected";} ?>> - </option>
+						<option value="/" <?php if ($op=='/') {echo " selected";} ?>> / </option>
+						<option value="*" <?php if ($op=='*') {echo " selected";} ?>> * </option>
+					</select><br>
+					<label>Result          :</label><br><h1> <span class="badge badge-pill badge-success"><?php echo($result); ?></span></h1>
+				</div>
+
+				
+				
+			<input type="submit" name="submit" class="btn btn-primary" value="Calculate">
+			</form>
+
+			
+	</div>
+	<div class="col-sm-4"></div>
+</div></div>
+</body>
+</html>

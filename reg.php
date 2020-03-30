@@ -27,7 +27,7 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
-                <input type="password" name="pass" class="form-control" id="exampleInputPassword1" required>
+                <input type="password" name="pass1" class="form-control" id="exampleInputPassword1" required>
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword2">Retype Password</label>

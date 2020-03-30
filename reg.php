@@ -1,3 +1,5 @@
+<?php include('server.php') ?>
+
 <!DOCTYPE html>
 
 <head>
@@ -13,8 +15,9 @@
 
 <body>
     <div class="container-fluid col-sm-6">
-        <h1>Login</h1>
-        <form>
+        <h1>Register</h1>
+        <form action="reg.php" method="post">
+            <?php include('errors.php') ?>
 
             <div class="form-group">
                 <label for="nam">Name</label>

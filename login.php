@@ -16,11 +16,11 @@
 <body>
     <div class="container-fluid col-sm-6">
         <h1>Login</h1>
-        <form>
+        <form method="post" action="login.php">
             <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <label for="un">Username</label>
+                <input type="text" name="username" class="form-control" id="un"  >
+                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
@@ -30,7 +30,9 @@
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
-            <input type="submit" class="btn btn-primary" value="Login">
+            <?php include('errors.php') ?>
+
+            <button type="submit" class="btn btn-primary" name="Loginuser">Login</button>
         </form>
     </div> 
 

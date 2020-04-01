@@ -4,13 +4,13 @@ session_start();
 
 $host = "localhost";
 $dbname = "loginsys";
-$errors = [];
+$errors = array();
 
 $username = "";
 $email = "";
 //connct to database
 $db = mysqli_connect($host, "root", "", $dbname) or die("could not connect to database");
-
+if (isset($_POST["reg_user"])) {
 //get inputs to register
 $username = mysqli_real_escape_string($db, $_POST["username"]);
 $email = mysqli_real_escape_string($db, $_POST["email"]);
@@ -34,15 +34,15 @@ if ($pass1 != $pass2) {
     array_push($errors, "Passwords does not match");
 }
 
-$user_check_query = "SELECT username FROM user WHERE username = '$username' OR email = '$email' LIMIT 1";
+$user_check_query = "SELECT * FROM user WHERE username = '$username' OR email = '$email' LIMIT 1";
 $result = mysqli_query($db, $user_check_query);
 $user_record = mysqli_fetch_assoc($result);
 
 if ($user_record) {
-    if ($user_record["username"] === $username) {
+    if ($user_record["username"] == $username) {
         array_push($errors, "Username already exists");
     }
-    if ($user_record["email"] === $email) {
+    if ($user_record["email"] == $email) {
         array_push($errors, "Email already exists");
     }
 }
@@ -51,10 +51,36 @@ if ($user_record) {
 if (count($errors) == 0) {
     $pass = md5($pass1);
     $query = "INSERT INTO user (username,email,pass) VALUES ('$username','$email','$pass')";
+    mysqli_query($db, $query);
     $_SESSION["username"] = $username;
     $_SESSION["success"] = "Now you are logged in";
-    mysqli_query($db, $query);
-
     header('location: index.php');
 }
+}
+// USER LOGIN 
 
+if (isset($_POST["Loginuser"])) {
+
+    $username = mysqli_real_escape_string($db, $_POST["username"]);
+    $pass = mysqli_real_escape_string($db, $_POST["pass"]);
+    
+    if (empty($username)) {
+        array_push($errors, "Username is not entered");
+    }
+    if (empty($pass)) {
+        array_push($errors, "Password is not entered");
+    }
+
+    if (count($errors) == 0) {
+        $pass = md5($pass);
+        $query = "SELECT * FROM user WHERE username='$username' AND pass='$pass'";
+        $result = mysqli_query($db, $query);
+        if (mysqli_num_rows($result)) {
+            $_SESSION["success"] = "You logged in successfully";
+            $_SESSION["username"] = $username;
+            header('location: index.php');
+        }else{
+            array_push($errors,"Username or password is incorrect"); 
+        }
+    }
+}

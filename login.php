@@ -1,4 +1,4 @@
-<?php include('server.php') ?>
+<!-- <?php include('server.php') ?> -->
 
 <!DOCTYPE html>
 
@@ -9,32 +9,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="stylesheet" href=""> -->
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./cssLogin/login.css">
 
 </head>
 
-<body>
-    <div class="container-fluid col-sm-6">
-        <h1>Login</h1>
-        <form method="post" action="login.php">
-            <div class="form-group">
-                <label for="un">Username</label>
-                <input type="text" name="username" class="form-control" id="un"  >
-                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" name="pass" class="form-control" id="exampleInputPassword1" required>
-            </div>
-            <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <?php include('errors.php') ?>
+<body class="text-center">
 
-            <button type="submit" class="btn btn-primary" name="Loginuser">Login</button>
-        </form>
-    </div> 
+
+    <form method="post" action="login.php" class="form-signin">
+        <h1>Login</h1>
+        <div class="form-group">
+            <label for="un">Username</label>
+            <input type="text" name="username" class="form-control" id="un">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" name="pass" class="form-control" id="exampleInputPassword1" required>
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <!-- <?php include('errors.php') ?> -->
+
+        <button type="submit" class="btn btn-primary" name="Loginuser">Sign in</button>
+    </form>
+
 
 </body>
 

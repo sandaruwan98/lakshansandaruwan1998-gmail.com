@@ -10,14 +10,15 @@
     <!-- <link rel="stylesheet" href=""> -->
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./cssLogin/login.css">
 
 </head>
 
-<body>
-    <div class="container-fluid col-sm-6">
-        <h1>Register</h1>
-        <form action="reg.php" method="post">
-            
+<body class="text-center">
+    
+       
+        <form action="reg.php" method="post" class="form-signin">
+             <h1>Register</h1>
             <div class="form-group">
                 <label for="nam">Name</label>
                 <input type="text" name="username" class="form-control" id="nam" aria-describedby="emailHelp" required>
@@ -25,7 +26,7 @@
             <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
                 <input type="text" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
@@ -42,11 +43,13 @@
             <?php include('errors.php') ?>
                 <br>
             <button type="submit" class="btn btn-primary" name="reg_user">Register</button>
-
-            <a href="login.php">Already a user</a>
+            <div class="amargin">
+                 <a href="login.php">Already a user</a>
+            </div>
+           
         </form>
 
-    </div>
+  
 </body>
 
 </html>

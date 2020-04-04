@@ -26,6 +26,7 @@ if (!isset($_SESSION["username"])) {
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./cssLogin/style.css">
+    <link rel="stylesheet" href="./cssLogin/menu.css">
 </head>
 
 <body>
@@ -38,7 +39,15 @@ if (!isset($_SESSION["username"])) {
                 <h3 id="logo">Welcome <?php echo $_SESSION["username"] ?> </h3>
 
             <?php endif ?>
-            <img src="./img/hamburger.png" alt="ffgg" class="hamburger">
+            <!-- <img src="./img/hamburger.png" alt="ffgg" class="hamburger"> -->
+            <div class="hamburger">
+            <input type="checkbox" id="hi">
+            <label class="menu" for="hi">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+        </div>
+            </label>
         </nav>
         <section>
             <div class="hero">
@@ -51,6 +60,8 @@ if (!isset($_SESSION["username"])) {
     <div class="slider"></div>
     <div class="p">
         <a class="btn btn-primary btn-lg" href="index.php?logout='1'" role="button">Logout</a>
+       
+
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem nisi sit quibusdam totam vero consectetur ipsum eligendi rerum veniam ut, eaque ratione. Earum alias necessitatibus nulla voluptatum, molestiae ex error.
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit pariatur cumque sit animi magnam officia, laudantium magni voluptatibus, consectetur aperiam nostrum, sunt praesentium iste vel commodi nemo laborum quas voluptatum.
         </p>

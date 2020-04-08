@@ -78,8 +78,8 @@ if (!isset($_SESSION["username"])) {
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                    <li class="nav-item ff">
+                        <a class="nav-link" href="#flexex">Features</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Pricing</a>
@@ -115,23 +115,6 @@ if (!isset($_SESSION["username"])) {
             </div>
         </nav>
 
-        <!-- <nav>
-            <?php if (isset($_SESSION["username"])) :
-
-            ?>
-                <h3 id="logo">Welcome <?php echo $_SESSION["username"] ?> </h3>
-
-            <?php endif ?>
-            <ul class="nav-links">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Projects</a></li>
-            </ul>
-             <img src="./img/hamburger.png" alt="ffgg" class="hamburger"> 
-
-
-        </nav> -->
-
         <section>
             <div class="hero">
                 <img src="./img/carwall.jpg" alt="">
@@ -142,16 +125,24 @@ if (!isset($_SESSION["username"])) {
     </header>
 
     <div class="slider"></div>
+
+    <div class="flex-1 ">
+        <div class="left-1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nisi, sequi delectus quasi ipsa
+            distinctio ut doloribus numquam beatae ab! Explicabo enim nisi, libero adipisci voluptates magni dignissimos
+            ipsum officiis.
+
+        </div>
+        <div class="right-1">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod dolorem neque exercitationem, aspernatur
+            perferendis eius iusto qui voluptatibus, placeat, quidem vero eaque odit obcaecati. Numquam sint cum
+            deleniti error voluptas? <br>
+            <h1 class="typo">Who the Fuck are you</h1>
+
+        </div>
+    </div>
     <div class="p">
-        <!-- <a class="btn btn-primary btn-lg" href="index.php?logout='1'" role="button">Logout</a> -->
-        <!-- <div class="hamburger">
-            <input type="checkbox" id="hi">
-            <label class="menu" for="hi">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </label>
-        </div> -->
+
 
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem nisi sit quibusdam totam vero consectetur
             ipsum eligendi rerum veniam ut, eaque ratione. Earum alias necessitatibus nulla voluptatum, molestiae ex
@@ -184,7 +175,9 @@ if (!isset($_SESSION["username"])) {
             incidunt, porro odio repudiandae iste aspernatur! Quos quasi, quibusdam molestiae nisi est soluta id facere
             quo?</h1>
     </div>
+    <div class="footer">
 
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
         integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
@@ -192,6 +185,8 @@ if (!isset($_SESSION["username"])) {
         integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>
 
     <script src="app.js"></script>
+
+
 
     <!-- jQuery -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -202,7 +197,9 @@ if (!isset($_SESSION["username"])) {
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
 
+    <script>
 
+    </script>
 </body>
 <?php
 

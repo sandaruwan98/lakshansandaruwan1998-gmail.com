@@ -1,15 +1,15 @@
 
   .menu {
-    position: absolute;
-    top: 5%;
-    
+    position: relative;
+    top: 0%;
+    right: 0%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     cursor: pointer;
     -webkit-transition: 0.5s ease;
     transition: 0.5s ease;
     height: 50px;
-    z-index: 2;
+    z-index: 4;
   }
   .menu:hover .bar {
     box-shadow: 1px 1px 7px 1px RGBa(0, 0, 0, 0.3);

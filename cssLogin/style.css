@@ -161,7 +161,7 @@ section{
     height: 400px;
     width: 40%;
     flex: 50%; 
-    padding: 60px 120px;  
+    padding: 100px 120px;  
     font-size: x-large;
 }
 
@@ -174,19 +174,43 @@ section{
 }
 
 .typo{
+    color: aliceblue;
+    opacity: 0;
+    transform: translateX(30px);
 
+    transition: 0.5s all ease-in-out;
 }
 
 .typo::after{
-    position: absolute;
+    /* position: absolute; */
     content: "";
     margin-left: 2px;
     width: 1px;
     margin-top: 4px;
-    height: 4%;
-    border-right: 2px solid black;
-    animation: blink 0.7s infinite;
+    height: 3%;
+    border-right: 2px solid aliceblue;
+    animation: blink 0.3s infinite;
 }
+
+.intro-l{
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: 0.5s all ease-in-out;
+}
+
+
+.intro-r{
+    opacity: 0;
+    transform: translateX(30px);
+    transition: 0.5s all ease-in-out;
+}
+
+.intro-appear{
+    opacity: 1;
+    transform: translateX(0);
+
+}
+
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
     .flex-1 {   

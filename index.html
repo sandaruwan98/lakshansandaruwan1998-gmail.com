@@ -29,6 +29,8 @@ if (!isset($_SESSION["username"])) {
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <script src="https://kit.fontawesome.com/2b554022ef.js" crossorigin="anonymous"></script>
+
     <!-- Google Fonts Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <!-- Bootstrap core CSS -->
@@ -50,17 +52,18 @@ if (!isset($_SESSION["username"])) {
             <div class="logmenu">
                 <!-- <button class="btn-pr"></button> -->
                 <div class="menubtn">
-                    <a href="" class="btn btn-dark btn-lg">My Account</a>
+                    <a href="" class="btn btn-dark btn-lg"><i class="fas fa-house-damage"></i> My Account</a>
                 </div>
                 <div class="menubtn">
-                    <a href="index.php?logout='1'" role="button" class="btn btn-dark btn-lg">Logout</a>
+                    <a href="index.php?logout='1'" role="button" class="btn btn-dark btn-lg"><i
+                            class="fas fa-sign-out-alt"></i> Logout</a>
                 </div>
 
             </div>
         </div>
 
         <nav class="mb-1 navbar navbar-expand-lg navbar-dark indigo fixed-top scrolling-navbar">
-            <a class="navbar-brand" href="#"> <?php if (isset($_SESSION["username"])) :
+            <a class="navbar-brand" href="#"><i class="fab fa-houzz"> </i><?php if (isset($_SESSION["username"])) :
 
                                                 ?>
                 Welcome <?php echo $_SESSION["username"] ?>
@@ -97,12 +100,12 @@ if (!isset($_SESSION["username"])) {
                 </ul>
                 <ul class="navbar-nav ml-auto nav-flex-icons">
                     <li class="nav-item">
-                        <a class="nav-link waves-effect waves-light">
+                        <a href="https://twitter.com/?lang=en" class="nav-link waves-effect waves-light">
                             <i class="fab fa-twitter">Twitter</i>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link waves-effect waves-light">
+                        <a href="https://www.google.com/" class="nav-link waves-effect waves-light">
                             <i class="fab fa-google-plus-g"></i>
                         </a>
                     </li>
@@ -118,36 +121,44 @@ if (!isset($_SESSION["username"])) {
         <section>
             <div class="hero">
                 <img src="./img/carwall.jpg" alt="">
-                <h1 class="headline">Dream big</h1>
+                <h1 class="headline font-weight-bolder"><i class="fas fa-virus"> </i>LK INC</h1>
             </div>
 
         </section>
     </header>
 
     <div class="slider"></div>
+    <section id="flexex">
+        <div class="flex-1 ">
+            <div class="left-1 rounded-lg shadow-lg">
+                <h2>Lorem ipsum</h2>
+                <p class="intro-l ">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nisi, sequi delectus quasi ipsa
+                    distinctio ut doloribus numquam beatae ab! Explicabo enim nisi, libero adipisci voluptates magni
+                    dignissimos
+                    ipsum officiis. <br><br>
+                    m ipsum dolor sit amet consectetur adipisicing elit. Repellendus nisi, sequi delectus quasi ipsa
+                    distinctio ut doloribus numquam beatae.
+                </p>
 
-    <div class="flex-1 ">
-        <div class="left-1">
-            <p class="intro-l">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nisi, sequi delectus quasi ipsa
-                distinctio ut doloribus numquam beatae ab! Explicabo enim nisi, libero adipisci voluptates magni
-                dignissimos
-                ipsum officiis.
-            </p>
+            </div>
+            <div class="right-1 rounded-lg shadow-lg">
+                <h2>Numquam sint</h2>
+                <p class="intro-r">
 
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod dolorem neque exercitationem,
+                    aspernatur
+                    perferendis eius iusto qui voluptatibus, placeat, quidem vero eaque odit obcaecati. Numquam sint cum
+                    deleniti error voluptas? <br>
+                    <h1 class="typo font-weight-bold">Who the Fuck are you</h1>
+
+                </p>
+
+
+            </div>
         </div>
-        <div class="right-1">
-            <p class="intro-r">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod dolorem neque exercitationem, aspernatur
-                perferendis eius iusto qui voluptatibus, placeat, quidem vero eaque odit obcaecati. Numquam sint cum
-                deleniti error voluptas? <br>
-                <h1 class="typo">Who the Fuck are you</h1>
-
-            </p>
-
-
-        </div>
-    </div>
+    </section>
+    <!-- 
     <div class="p">
 
 
@@ -181,8 +192,70 @@ if (!isset($_SESSION["username"])) {
         <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo eveniet nulla quidem ad pariatur
             incidunt, porro odio repudiandae iste aspernatur! Quos quasi, quibusdam molestiae nisi est soluta id facere
             quo?</h1>
+    </div> -->
+    <!--Waves Container-->
+    <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.5" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255, 0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255, 0.1)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(41, 49, 75)" />
+            </g>
+        </svg>
     </div>
-    <div class="footer">
+    <!--Waves end-->
+
+    <div class="footer row">
+        <div class="col-sm-5 text-center">
+            <h3 class="mb-3 font-weight-bold text-uppercase text-warning"><i class="fas fa-virus"></i> LK INC</h3>
+
+            <ul class="list-unstyled text-default ">
+                <li>
+                    <h5 class="text-primary">Contact Us</h5>
+                </li>
+                <li class="mb-3"><a class="text-reset" href="">lakshansandaruwan1998@gmail.com</a></li>
+                <li class="mb-4"><a class="text-reset" href="">+94701549225</a></li>
+                <li class="text-muted">coporated limited <i class="fas fa-copyright"></i></i>
+                </li>
+
+            </ul>
+        </div>
+        <div class="col-sm-2 text-left">
+            <h6 class="mb-3 font-weight-bold text-uppercase text-primary">Products</h6>
+            <ul class="list-unstyled text-muted ">
+                <li class="mb-3"><a class="text-reset" href="">Style Guide</a></li>
+                <li class="mb-3"><a class="text-reset" href="">Page Builder</a></li>
+                <li class="mb-3"><a class="text-reset" href="">UI Kit</a></li>
+
+                <li class="mb-3"><a class="text-reset" href=""></a>Docs</li>
+            </ul>
+        </div>
+        <div class="col-sm-2 text-left">
+            <h6 class="mb-3 font-weight-bold text-uppercase text-primary">Services</h6>
+            <ul class="list-unstyled text-muted ">
+
+                <li class="mb-3"><a class="text-reset" href="">UI Kit</a></li>
+                <li class="mb-3"><a class="text-reset" href=""></a>Change Log</li>
+                <li class="mb-3"><a class="text-reset" href="">Page Builder</a></li>
+                <li class="mb-3"><a class="text-reset" href="">Documentation</a></li>
+
+            </ul>
+        </div>
+        <div class="col-sm-2 text-left">
+            <h6 class="mb-3 font-weight-bold text-uppercase text-primary">Legal</h6>
+            <ul class="list-unstyled text-muted ">
+
+                <li class="mb-3"><a class="text-reset" href="">Documentation</a></li>
+                <li class="mb-3"><a class="text-reset" href=""></a>Change Log</li>
+                <li class="mb-3"><a class="text-reset" href="">Page Builder</a></li>
+            </ul>
+        </div>
+
 
     </div>
 

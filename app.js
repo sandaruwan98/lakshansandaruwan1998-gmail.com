@@ -51,7 +51,9 @@ menutrigger.addEventListener("click", () => {
 function scrollAppear() {
   var animtextL = document.querySelector(".intro-l");
   var animtextR = document.querySelector(".intro-r");
+  var YELLOWTXT = document.querySelector(".text-container");
   var textposition = animtextL.getBoundingClientRect().top;
+  var yellowposition = YELLOWTXT.getBoundingClientRect().top;
   var screenPosition = window.innerHeight / 1.3;
   if (textposition < screenPosition) {
     animtextL.classList.add("intro-appear");
@@ -61,6 +63,10 @@ function scrollAppear() {
     //   transform: "translateX(0)",
     // });
   }
+  if (yellowposition < screenPosition) {
+    YELLOWTXT.classList.add("yellow-appear");
+  }
+
   if (textposition > 250) {
     var heropos = hero.getBoundingClientRect().bottom;
     var percet = (heropos / window.innerHeight) * 100;

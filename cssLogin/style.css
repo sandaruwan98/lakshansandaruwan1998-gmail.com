@@ -263,12 +263,20 @@ li {
 .text-container {
   padding: 130px 100px;
   text-align: center;
+  opacity: 0;
+  transform: translateY(20%);
+  transition: 1.3s all ease-in-out;
 }
 
 .text-container h1 {
   font-size: 60px;
   text-shadow: 1px 1px 5px black;
   font-family: cursive;
+}
+
+.yellow-appear {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Footer */

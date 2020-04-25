@@ -1,11 +1,11 @@
 // const headline = document.querySelector(".headline");
 const hero = document.querySelector(".hero");
 
-var ff = document.querySelector(".ff");
-ff.addEventListener("click", () => {
-  var screenPosition = window.innerHeight;
-  alert(screenPosition);
-});
+// var ff = document.querySelector(".ff");
+// ff.addEventListener("click", () => {
+//   var screenPosition = window.innerHeight;
+//   alert(screenPosition);
+// });
 
 //* auto typing effect ------------------------------
 const typo = document.querySelector(".typo");

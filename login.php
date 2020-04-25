@@ -44,13 +44,18 @@
         </div>
       
         <!-- custom checkbox -->
-        <label class="check">Check me out
+        <label class="check">Keep me logged in
             <input type="checkbox" class="check-input" id="exampleCheck1">
             <span class="check-mark"></span>
         </label>
         <?php include('errors.php') ?>
 
         <button type="submit" class="btn btn-primary" name="Loginuser">Sign in</button>
+
+        <div style="margin-top: 0.3em;">
+                 <a href="reg.php">Not an user</a>
+            </div>
+           
     </form>
 
 

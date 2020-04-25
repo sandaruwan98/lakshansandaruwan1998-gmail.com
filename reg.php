@@ -11,6 +11,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./cssLogin/login.css">
+    <link rel="stylesheet" href="./cssLogin/custominput.css">
 
 </head>
 
@@ -19,32 +20,41 @@
        
         <form action="reg.php" method="post" class="form-signin">
              <h1>Register</h1>
-            <div class="form-group">
-                <label for="nam">Name</label>
-                <input type="text" name="username" class="form-control" id="nam" aria-describedby="emailHelp" required>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="text" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" name="pass1" class="form-control" id="exampleInputPassword1" required>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword2">Retype Password</label>
-                <input type="password" name="pass2" class="form-control" id="exampleInputPassword2" required>
-            </div>
-            <!-- <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div> -->
+           
+        <div class="input-cls">
+            <input type="text" name="username" id="un" autocomplete="off" required>
+            <label for="name" class="label-cls">
+                <span class="span-cls">UserName</span>
+            </label>
+        </div>
+        
+           
+        <div class="input-cls">
+            <input type="text" name="email" id="un" autocomplete="off" required>
+            <label for="name" class="label-cls">
+                <span class="span-cls">Email Address</span>
+            </label>
+        </div>
+        
+        <div class="input-cls">
+            <input type="password" name="pass1" id="exampleInputPassword1" autocomplete="off" required>
+            <label for="name" class="label-cls">
+                <span class="span-cls">Password</span>
+            </label>
+        </div>
+        
+        <div class="input-cls">
+            <input type="password" name="pass2" id="exampleInputPassword1" autocomplete="off" required>
+            <label for="name" class="label-cls">
+                <span class="span-cls">Retype Password</span>
+            </label>
+        </div>
+          
             <?php include('errors.php') ?>
                 <br>
             <button type="submit" class="btn btn-primary" name="reg_user">Register</button>
             <div class="amargin">
-                 <a href="login.php">Already a user</a>
+                 <a href="login.php">Already an user</a>
             </div>
            
         </form>

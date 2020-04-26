@@ -8,6 +8,11 @@ if (!isset($_SESSION["username"])) {
 }
 
 
+if ($_GET["logout"]) {
+    session_destroy();
+    unset($_SESSION["username"]);
+    header("location: login.php");
+}
 
 
 
@@ -77,15 +82,18 @@ if (!isset($_SESSION["username"])) {
             <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home
+                        <a class="nav-link" id="link0" >Home
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#flexex">Features</a>
+                        <a class="nav-link" id="link1" href="#flexex">Features</a>
                     </li>
                     <li class="nav-item ff">
-                        <a class="nav-link" >Pricing</a>
+                        <a class="nav-link" id="link2">Pricing</a>
+                    </li>
+                    <li class="nav-item ff">
+                        <a class="nav-link" id="link3">About</a>
                     </li>
                     <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
@@ -297,17 +305,7 @@ if (!isset($_SESSION["username"])) {
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
 
-    <script>
 
-    </script>
 </body>
-<?php
-
-if ($_GET["logout"]) {
-    session_destroy();
-    unset($_SESSION["username"]);
-    header("location: login.php");
-}
-?>
 
 </html>

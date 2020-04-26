@@ -47,33 +47,82 @@ menutrigger.addEventListener("click", () => {
   });
 });
 
-//*scroll triggering animations -------------------------------
-function scrollAppear() {
-  var animtextL = document.querySelector(".intro-l");
-  var animtextR = document.querySelector(".intro-r");
-  var YELLOWTXT = document.querySelector(".text-container");
-  var textposition = animtextL.getBoundingClientRect().top;
-  var yellowposition = YELLOWTXT.getBoundingClientRect().top;
-  var screenPosition = window.innerHeight / 1.3;
-  if (textposition < screenPosition) {
-    animtextL.classList.add("intro-appear");
-    animtextR.classList.add("intro-appear");
-    // $(typo).css({
-    //   opacity: "1",
-    //   transform: "translateX(0)",
-    // });
-  }
-  if (yellowposition < screenPosition) {
-    YELLOWTXT.classList.add("yellow-appear");
+//*smooth scroll animation ------------------------------------
+
+function scrollanim(target, duration) {
+  var target = document.querySelector(target);
+  var startPosition = window.pageYOffset;
+  var targetPosition = target.getBoundingClientRect().top;
+  var distance = targetPosition ;
+  var startTime = null;
+
+  function animation(currentTime) {
+    if (startTime == null) startTime = currentTime;
+    var timeElapsed = currentTime - startTime;
+    var run = ease(timeElapsed, startPosition, distance, duration);
+    window.scrollTo(0, run);
+
+    if (timeElapsed < duration) {
+      requestAnimationFrame(animation);
+    }
   }
 
-  if (textposition > 250) {
-    var heropos = hero.getBoundingClientRect().bottom;
-    var percet = (heropos / window.innerHeight) * 100;
-    console.log(Math.trunc(percet) / 10);
-    hero.style.opacity = Math.trunc(percet) / 100;
+  function ease(t, b, c, d) {
+    t /= d;
+    return c * t * t * t * t + b;
   }
+
+  requestAnimationFrame(animation);
 }
+
+const link0 = document.querySelector("#link0");
+const link1 = document.querySelector("#link1");
+const link2 = document.querySelector("#link2");
+const link3 = document.querySelector("#link3");
+
+link0.addEventListener('click',()=>{
+  scrollanim(".slider",1000)
+})
+
+link1.addEventListener('click',()=>{
+  scrollanim("#flexex",1000)
+})
+
+link2.addEventListener('click',()=>{
+  scrollanim(".listtile",1000)
+})
+
+link3.addEventListener('click',()=>{
+  scrollanim(".text-container",1000)
+})
+
+  //*scroll triggering animations -------------------------------
+  function scrollAppear() {
+    var animtextL = document.querySelector(".intro-l");
+    var animtextR = document.querySelector(".intro-r");
+    var YELLOWTXT = document.querySelector(".text-container");
+    var textposition = animtextL.getBoundingClientRect().top;
+    var yellowposition = YELLOWTXT.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight / 1.3;
+    if (textposition < screenPosition) {
+      animtextL.classList.add("intro-appear");
+      animtextR.classList.add("intro-appear");
+      // $(typo).css({
+      //   opacity: "1",
+      //   transform: "translateX(0)",
+      // });
+    }
+    if (yellowposition < screenPosition) {
+      YELLOWTXT.classList.add("yellow-appear");
+    }
+
+    if (textposition > 250) {
+      var heropos = hero.getBoundingClientRect().bottom;
+      var percet = (heropos / window.innerHeight) * 100;
+      console.log(Math.trunc(percet) / 10);
+      hero.style.opacity = Math.trunc(percet) / 100;
+    }
+  };
 
 window.addEventListener("scroll", scrollAppear);
 

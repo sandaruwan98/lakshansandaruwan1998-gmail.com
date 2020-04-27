@@ -97,6 +97,7 @@ link3.addEventListener('click',()=>{
 })
 
   //*scroll triggering animations -------------------------------
+
   function scrollAppear() {
     var animtextL = document.querySelector(".intro-l");
     var animtextR = document.querySelector(".intro-r");

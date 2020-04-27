@@ -194,13 +194,13 @@ li {
 .intro-l {
   opacity: 0;
   transform: translateX(-30px);
-  transition: 0.5s all ease-in-out;
+  transition: 1s all ease-in-out;
 }
 
 .intro-r {
   opacity: 0;
   transform: translateX(30px);
-  transition: 0.5s all ease-in-out;
+  transition: 1s all ease-in-out;
 }
 
 .intro-appear {
